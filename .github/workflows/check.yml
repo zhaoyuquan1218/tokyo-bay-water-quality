@@ -1,0 +1,25 @@
+name: Reproducible R workflow
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: r-lib/actions/setup-r@f9a764fea8d5c63df6ef9a5c7795bf7deb5d7e05 # v2
+        with:
+          r-version: '4.5.3'
+      - name: Restore locked dependencies
+        run: Rscript --vanilla scripts/setup.R
+      - name: Acquire verified data and execute analysis
+        run: Rscript --vanilla run_all.R
+      - name: Test QA and statistical contracts
+        run: Rscript --vanilla tests/testthat.R
+      - name: Reconcile outputs
+        run: Rscript --vanilla scripts/validate_outputs.R
+      - name: Check deterministic data and report products
+        run: git diff --exit-code -- data/processed outputs/tables outputs/report.md

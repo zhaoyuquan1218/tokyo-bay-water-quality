@@ -1,0 +1,20 @@
+# Optional LOCAL-ONLY adapter. No private path or input is bundled in this repository.
+# Input must be a user-approved long-format station-quarter export with verified units.
+args <- commandArgs(trailingOnly = TRUE)
+if (length(args) != 1L) stop("Usage: Rscript --vanilla scripts/audit_station_export.R <approved-export.csv>")
+if (file.exists("renv/activate.R")) source("renv/activate.R")
+source("R/utils.R"); source("R/qc.R")
+config <- read_config()
+x <- utils::read.csv(args[1], colClasses = "character", check.names = FALSE)
+require_columns(x, c("record_id", "source_file", "station_key", "layer", "year", "quarter", "variable", "unit", "raw_value"))
+assert(!anyNA(x$source_file) && all(nzchar(x$source_file)), "Source provenance is required.")
+x$year <- strict_numeric(x$year); x$quarter <- strict_numeric(x$quarter)
+stations <- utils::read.csv("config/stations.csv", colClasses = "character")
+j <- match(x$station_key, stations$station_key)
+assert(!anyNA(j), "Unapproved station key.")
+if ("region" %in% names(x)) assert(all(x$region == stations$region[j]), "Supplied regional label conflicts with mapping.")
+x$region <- stations$region[j]
+qc <- qc_records(x, config$variables, config$analysis["iqr_multiplier"], station_grain = TRUE)
+write_table(qc, "outputs/private/station_record_qc.csv")
+write_table(aggregate_stations(qc, stations), "outputs/private/station_regional_summary.csv")
+message("Local QA outputs saved under ignored outputs/private/. No Git operation was performed.")

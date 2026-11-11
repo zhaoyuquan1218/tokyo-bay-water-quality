@@ -1,0 +1,31 @@
+"region","layer","variable","unit","n_records","n_eligible","missing","parse","unit_mismatch","domain","duplicate","review_outlier"
+"Center","surface","Chla","ug/L",164,162,0,0,0,0,2,4
+"North","surface","Chla","ug/L",164,164,0,0,0,0,0,1
+"South","surface","Chla","ug/L",164,162,0,0,0,0,2,3
+"Center","surface","Clarity","m",164,162,0,0,0,0,2,0
+"North","surface","Clarity","m",164,164,0,0,0,0,0,2
+"South","surface","Clarity","m",164,162,0,0,0,0,2,2
+"Center","surface","DO","mg/L",164,162,0,0,0,0,2,0
+"North","surface","DO","mg/L",164,164,0,0,0,0,0,2
+"South","surface","DO","mg/L",164,162,0,0,0,0,2,0
+"Center","surface","DOC","mg C/L",164,162,0,0,0,0,2,4
+"North","surface","DOC","mg C/L",164,164,0,0,0,0,0,6
+"South","surface","DOC","mg C/L",164,162,0,0,0,0,2,4
+"Center","surface","pH","dimensionless",164,162,0,0,0,0,2,0
+"North","surface","pH","dimensionless",164,164,0,0,0,0,0,0
+"South","surface","pH","dimensionless",164,162,0,0,0,0,2,0
+"Center","surface","Pheophytin","ug/L",164,162,0,0,0,0,2,2
+"North","surface","Pheophytin","ug/L",164,164,0,0,0,0,0,0
+"South","surface","Pheophytin","ug/L",164,162,0,0,0,0,2,3
+"Center","surface","Salinity","PSU",164,162,0,0,0,0,2,2
+"North","surface","Salinity","PSU",164,164,0,0,0,0,0,5
+"South","surface","Salinity","PSU",164,162,0,0,0,0,2,1
+"Center","surface","TN","mg N/L",164,162,0,0,0,0,2,0
+"North","surface","TN","mg N/L",164,164,0,0,0,0,0,1
+"South","surface","TN","mg N/L",164,162,0,0,0,0,2,0
+"Center","surface","TP","mg P/L",164,162,0,0,0,0,2,0
+"North","surface","TP","mg P/L",164,164,0,0,0,0,0,2
+"South","surface","TP","mg P/L",164,162,0,0,0,0,2,0
+"Center","surface","WT","degC",164,162,0,0,0,0,2,0
+"North","surface","WT","degC",164,164,0,0,0,0,0,3
+"South","surface","WT","degC",164,162,0,0,0,0,2,2

@@ -1,0 +1,7 @@
+setting,value,rationale
+start_year,1981,Published study interval
+end_year,2021,Published study interval
+annual_min_quarters,4,Require complete seasonal coverage for annual means
+trend_min_quarters,80,Require at least half the 164-quarter study grid
+hac_lag,4,One year of quarterly residual dependence; sensitivity at 8 quarters
+iqr_multiplier,3,Conservative review flag only; never automatically excluded

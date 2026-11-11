@@ -1,0 +1,11 @@
+variable,source_header,unit,lower,upper,bound_rationale
+DOC,DOC (mg C L\u207b\u00b9),mg C/L,0,Inf,Nonnegative concentration; no arbitrary upper rejection
+Chla,Chla (\u00b5g L\u207b\u00b9),ug/L,0,Inf,Nonnegative concentration
+Pheophytin,Pheophytin (\u00b5g L\u207b\u00b9),ug/L,0,Inf,Nonnegative concentration
+TN,TN (mg N L\u207b\u00b9),mg N/L,0,Inf,Nonnegative concentration
+TP,TP (mg P L\u207b\u00b9),mg P/L,0,Inf,Nonnegative concentration
+WT,Water temperature (\u00b0C),degC,-Inf,Inf,No source-supported rejection threshold
+pH,pH,dimensionless,0,14,Conventional aqueous screening range; review if flagged
+DO,DO (mg L\u207b\u00b9),mg/L,0,Inf,Nonnegative concentration
+Salinity,Salinity (PSU),PSU,0,Inf,Source unit label retained; no conversion
+Clarity,Clarity (m),m,0,Inf,Nonnegative depth

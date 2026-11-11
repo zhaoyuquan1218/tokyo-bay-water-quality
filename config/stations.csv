@@ -1,0 +1,7 @@
+station_label,region,station_key,config_latitude,config_longitude,selection_source,role
+N1,North,1210014,35.53500000,139.9466667,prior_manuscript_Fig1,regional_observation
+N2,North,1210015,35.55444444,139.9055556,prior_manuscript_Fig1,regional_observation
+C1,Center,1210030,35.40250000,139.8661111,prior_manuscript_Fig1,regional_observation
+C2,Center,1210035,35.35333333,139.8016667,prior_manuscript_Fig1,regional_observation
+C3,Center,1310026,35.46750000,139.8527778,prior_manuscript_Fig1,regional_observation
+S1,South,1210038,35.24500000,139.8300000,prior_manuscript_Fig1,regional_observation
